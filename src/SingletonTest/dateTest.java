@@ -8,12 +8,14 @@ import java.text.SimpleDateFormat;
 public class dateTest {
 	public static void main(String[] args) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		Date d1 = sdf.parse("2012-09-08 10:10:10");
+		String d1 = sdf.format(new Date());
+		System.out.println(d1);
+		// Date d1 = sdf.parse("2012-09-08 10:10:10");
 		Date d2 = sdf.parse("2012-09-15 00:00:00");
-		System.out.println(daysBetween(d1, d2));
-
-		System.out.println(daysBetween("2012-09-08 10:10:10",
-				"2012-09-15 00:00:00"));
+//		System.out.println(daysBetween(d1, d2));
+//
+//		System.out.println(daysBetween("2012-09-08 10:10:10",
+//				"2012-09-15 00:00:00"));
 	}
 
 	public static int daysBetween(Date smdate, Date bdate)
